@@ -14,16 +14,30 @@
         <img id="poster_y" src="assets/backgrounds/poster_y.jpg" alt="">
         <img id="poster_x" src="assets/backgrounds/poster_x.jpg" alt="">
     </header>
+    <div id="rainbow-separator"></div>
     <main>
         <div class="wrapper">
             <section class="content">
                 <h1 class="italic">Le Bal des Fiertés de Lyon revient en 2023 !</h1>
                 <p>Les couleurs sont à l'honneur ! Prépare ta meilleure tenue et rejoins-nous le <b>samedi 3 juin à
-                        partir de 19h</b> pour une soirée dansante mémorable !</p>
-                <div class="button">
+                        partir de 19h à l'Hôtel de Ville de Lyon</b> pour une soirée dansante mémorable !</p>
+                <p></p>
+                <div class="button" onclick="location.href = 'https:\/\/www.example.com';">
+                    <div class="button-colors">
+                        <div class="color-red button-color"></div>
+                        <div class="color-orange button-color"></div>
+                        <div class="color-yellow button-color"></div>
+                        <div class="color-green button-color"></div>
+                        <div class="color-blue button-color"></div>
+                        <div class="color-purple button-color"></div>
+                    </div>
                     <a href="https://www.example.com">
                         Réserver sa place gratuitement</a>
                 </div>
+                <p class="italic">Si vous ne pouvez pas venir alors que vous avez déjà
+                    réservé votre place, contactez-nous <a href="mailto:exit@listes.insa-lyon.fr">par
+                        mail</a> afin que nous puissions réattribuer la place à un-e
+                    autre chanceux-se.</p>
             </section>
 
             <div class="flag"></div>
@@ -31,10 +45,11 @@
                 <div class="vertical-flag"></div>
                 <h2>Vous avez dit Bal des Fiertés ?</h2>
                 <p>Le temps d'une soirée, l'Hôtel de Ville de Lyon accueille le Bal le plus coloré de l'année !</p>
-                <p>Au programme, concert dansant d'artistes locaux, repas vegétarien local, village associatif, espace
+                <p>Au programme : concert dansant, repas vegétarien local, village associatif, espace
                     chill et espace
                     prévention !</p>
-                <p>Le bal est un évènement inclusif, gratuit et ouvert à toustes, sans distinction.</p>
+                <p>Le Bal est un évènement inclusif, gratuit et ouvert à toustes, sans distinction. N'oubliez pas de
+                    réserver votre place, c'est gratuit !</p>
                 <div class="vertical-flag"></div>
             </article>
             <div class="flag"></div>
@@ -45,14 +60,30 @@
                 <p>Trois artistes locaux seront présents pour accompagner vos danses endiablées...</p>
                 <div class="artists">
                     <div class="artist-intro">
+                        <img class="artist-photos" src="assets/photos/centuries.jpg" alt="">
+                        <h2>Centuries</h2>
+                        <p class="artist-genre italic">Pop/Rock/Funk</p>
+                        <p class="artist-description">Groupe étudiant Insalien qui saura vous faire danser sur leurs
+                            reprises.</p>
+                        <a href="https://www.instagram.com/centuriesband/"><img
+                                src="assets/logo/Instagram_Glyph_Gradient_RGB.svg" alt="Compte Instagram d'EXIT"
+                                class="social-icon artist-social-icon"></a>
+                    </div>
+                    <div class="artist-intro">
                         <img class="artist-photos" src="assets/photos/coeur.jpg" alt="">
                         <h2>Coeur</h2>
                         <p class="artist-genre italic">Style</p>
                         <p class="artist-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Pellentesque
-                            luctus fringilla molestie. Pellentesque nec sapien ipsum. Vestibulum vel dolor rutrum,
-                            fermentum
-                            tortor vitae, malesuada arcu. Sed sed nisi ornare, ultricies dui a, ultrices nunc.</p>
+                            luctus fringilla molestie.</p>
+                        <div>
+                            <a href="https://www.instagram.com/coeurkokoro/"><img
+                                    src="assets/logo/Instagram_Glyph_Gradient_RGB.svg" alt="Compte Instagram d'EXIT"
+                                    class="social-icon artist-social-icon"></a>
+                            <a href="https://www.youtube.com/@Coeurkokoro/"><img
+                                    src="assets/logo/YouTube_full-color_icon.svg" alt="Compte Instagram d'EXIT"
+                                    class="social-icon artist-social-icon"></a>
+                        </div>
                     </div>
                     <div class="artist-intro">
                         <img class="artist-photos" src="assets/photos/dj_pompompom.jpg" alt="">
@@ -60,16 +91,14 @@
                         <p class="artist-genre italic">Style</p>
                         <p class="artist-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Pellentesque
-                            luctus fringilla molestie. Pellentesque nec sapien ipsum. Vestibulum vel dolor rutrum,
-                            fermentum
-                            tortor vitae, malesuada arcu. Sed sed nisi ornare, ultricies dui a, ultrices nunc.</p>
-                    </div>
-                    <div class="artist-intro">
-                        <img class="artist-photos" src="assets/photos/centuries.jpg" alt="">
-                        <h2>Centuries</h2>
-                        <p class="artist-genre italic">Pop/Rock/Funk</p>
-                        <p class="artist-description">Groupe Insalien qui saura vous faire danser sur leurs reprises
-                            Pop/Rock/Funk.</p>
+                            luctus fringilla molestie.</p>
+                        <div>
+                            <a href="https://www.instagram.com/djpompompom/"><img
+                                    src="assets/logo/Instagram_Glyph_Gradient_RGB.svg" alt="Compte Instagram d'EXIT"
+                                    class="social-icon artist-social-icon"></a>
+                            <a href="https://www.facebook.com/djpompompom/"><img src="assets/logo/Facebook_f_logo.svg"
+                                    alt="Compte Instagram d'EXIT" class="social-icon artist-social-icon"></a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -109,7 +138,7 @@
             <section class="content">
                 <h1>Accès</h1>
                 <div class="flag thin"></div>
-                <p>Accès via Métro : lignes A et C (arrêt Hôtel de Ville)</p>
+                <p>Métro : lignes A et C (arrêt Hôtel de Ville)</p>
                 <div class="metros">
                     <img src="assets/logo/Metro_A_1.svg" alt="">
                     <img src="assets/logo/Metro_C_1.svg" alt="">

@@ -55,6 +55,8 @@ body {
 main {
     /* height: 500vh; */
     background: linear-gradient(0deg, var(--magenta), var(--light-purple));
+    background-image: url(assets/backgrounds/low_poly_back_vertical.svg);
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -70,7 +72,7 @@ a {
 
 a:hover {
     text-decoration-color: var(--white);
-    opacity: 0.8;
+    /* opacity: 0.8; */
 }
 
 p,
@@ -110,6 +112,10 @@ h2 {
     line-height: 1.25em;
 }
 
+#rainbow-separator {
+    display: none;
+}
+
 .italic {
     font-style: italic;
 }
@@ -128,6 +134,7 @@ h2 {
 
 .content {
     padding: 1.5em 0;
+    position: relative;
 }
 
 .button {
@@ -192,7 +199,7 @@ h2 {
 
 .flag {
     display: flex;
-    background-image: url(assets/backgrounds/rainbow.svg);
+    background-image: url(assets/misc/rainbow.svg);
     background-repeat: repeat;
     background-size: contain;
     height: 20px;
@@ -232,7 +239,7 @@ h2 {
         linear-gradient(90deg, var(--light-purple) 0.1em, transparent 0.1em);
     background-size: 2em 2em;
     /* background-image: url(assets/backgrounds/back_box.png);
-    background-size: cover; */ 
+    background-size: cover; */
     margin: 0 1em;
     padding: 2em;
 }
@@ -286,6 +293,33 @@ header {
 }
 
 @media screen and (min-device-width: 480px) {
+
+    @keyframes slidein {
+        from {
+          margin-left: -100%;
+        }
+        to {
+          margin-left: 0%;
+        }
+      }
+    @keyframes slideout {
+        from {
+          margin-left: 0%;
+        }
+        to {
+          margin-left: -100%;
+        }
+      }
+
+    #rainbow-separator {
+        display: block;
+        height: 10px;
+        display: flex;
+        background-image: url(assets/misc/rainbow.svg);
+        background-repeat: repeat;
+        background-size: contain;
+    }
+
     #poster_y {
         display: none;
     }
@@ -297,32 +331,151 @@ header {
     .content {
         margin: 0.2em 20%;
         padding: 0.5em 0;
-        width: 70%;
+        width: 100%;
+    }
+
+    .content p,
+    .content h1,
+    .content ul {
+        width: 50%;
+    }
+
+    .artist-intro p,
+    .artist-intro h2 {
+        width: 100%;
     }
 
     .button {
-        max-width: 40%;
+        max-width: 25%;
         padding: 1% 3%;
+        position: relative;
+    }
+
+    .button:hover {
+        cursor: pointer;
+    }
+
+    .button:hover .button-color {
+        visibility: visible;
+        margin-left: -100%;
+        /* opacity: 1; */
+        animation: slidein 1s forwards;
+        transition: all 0s;
+        /* transition-delay: 200ms; */
+    }
+
+    .button a {
+        transition: color 500ms;
+        transition-delay: 200ms;
+    }
+
+    .button:hover a {
+        color: white;
+        transition: color 500ms;
+        transition-delay: 500ms;
+    }
+    
+    .button-colors {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        z-index: -1;
+    }
+    
+    .button-color {
+        width: 100%;
+        height: 17%;
+        /* margin-left: 0%; */
+        /* margin-left: -100%; */
+        visibility: hidden;
+        transition: all 0s;
+        transition-delay: 1.1s;
+        /* opacity: 0; */
+        z-index: -1;
+        animation: slideout 1s forwards;
+    }
+
+    .color-red {
+        background-color: var(--red);
+    }
+    .color-orange {
+        background-color: var(--orange);
+        animation-delay: 100ms;
+    }
+    .color-yellow {
+        background-color: var(--yellow);
+        animation-delay: 150ms;
+    }
+    .color-green {
+        background-color: var(--green);
+        animation-delay: 200ms;
+    }
+    .color-blue {
+        background-color: var(--dark-blue);
+        animation-delay: 250ms;
+    }
+    .color-purple {
+        background-color: var(--purple);
+        animation-delay: 300ms;
+    }
+
+    .button:hover .color-red {
+        background-color: var(--red);
+    }
+    .button:hover .color-orange {
+        background-color: var(--orange);
+        animation-delay: 100ms;
+    }
+    .button:hover .color-yellow {
+        background-color: var(--yellow);
+        animation-delay: 150ms;
+    }
+    .button:hover .color-green {
+        background-color: var(--green);
+        animation-delay: 200ms;
+    }
+    .button:hover .color-blue {
+        background-color: var(--dark-blue);
+        animation-delay: 250ms;
+    }
+    .button:hover .color-purple {
+        background-color: var(--purple);
+        animation-delay: 300ms;
     }
 
     .box,
     .flag {
-        width: 70%;
+        width: 52%;
     }
 
     .box {
         position: relative;
+        padding-left: 2em;
+        padding-right: 2em;
     }
 
     .artists {
         display: flex;
-        width: 120%;
+        width: 70%;
         margin: 1em 0;
         margin-bottom: -1em;
     }
 
     .artist-intro {
-        width: 35%;
+        width: 35em;
+    }
+
+    .artist-social-icon:hover {
+        opacity: 0.8;
+        transition: all 200ms;
+    }
+
+    .artist-social-icon {
+        transition: all 200ms;
     }
 
     .artist-intro:last-of-type {
@@ -334,7 +487,7 @@ header {
         position: absolute;
         width: 100%;
         height: 100%;
-        background-image: url(assets/backgrounds/vertical_rainbow.svg);
+        background-image: url(assets/misc/vertical_rainbow.svg);
         background-repeat: repeat-y;
         background-size: 20px;
         margin-top: -1em;
@@ -348,6 +501,6 @@ header {
     }
 
     iframe {
-        width: 100%;
+        width: 52%;
     }
 }
