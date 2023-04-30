@@ -46,12 +46,12 @@
 
 body {
     margin: 0;
-    color: var(--light-yellow);
+    color: var(--black);
     background-color: var(--light-purple);
 }
 
 main {
-    height: 500vh;
+    /* height: 500vh; */
     background: linear-gradient(0deg, var(--magenta), var(--light-purple));
     display: flex;
     justify-content: center;
@@ -60,17 +60,44 @@ main {
 
 a {
     text-decoration: none;
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--black);
+    text-decoration-thickness: 2px;
+}
+
+a:hover {
+    text-decoration-color: var(--white);
+    opacity: 0.8;
 }
 
 p,
 li {
     font-size: 1.2em;
     margin: 0.25em;
+    font-weight: 600;
+}
+
+li::before {
+    content: ">";
+    padding-right: 5px;
+}
+
+li {
+    text-align: left;
+    list-style-type: none;
+    text-indent: -1em;
+}
+
+b {
+    font-weight: 750;
+    font-style: oblique;
+    color: var(--black);
 }
 
 h1 {
     font-size: 2.5em;
-    margin: 10px;
+    margin: 10px 0 0 0;
     line-height: 1.25em;
 }
 
@@ -89,15 +116,16 @@ h2 {
     width: 95%;
 }
 
-.wrapper, .intro {
+.wrapper,
+.content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.intro {
-    padding: 2em 0;
+.content {
+    padding: 1.5em 0;
 }
 
 .button {
@@ -119,6 +147,7 @@ h2 {
     border-bottom: 4px solid;
     color: var(--black);
     transition: none;
+    text-decoration: none;
 }
 
 #poster {
@@ -126,7 +155,8 @@ h2 {
 }
 
 .logos {
-    width: 5em;
+    margin: 0.5em 0;
+    width: 7em;
 }
 
 .box {
@@ -134,15 +164,23 @@ h2 {
     flex-direction: column;
     justify-content: baseline;
     align-items: center;
+    padding: 1em;
     width: 100vw;
-    height: 500px;
-    background-color: var(--white);
+    background-color: var(--light-yellow);
+    background-image: url(assets/backgrounds/back_box.png);
+    background-size: cover;
     color: var(--black);
-    /* background: linear-gradient(0deg, var(--red), var(--purple)); */
+    text-shadow: 1px 1px 10px var(--white);
+    font-weight: 600;
+    /* background: linear-gradient(0deg, var(--cyan) 10%, var(--light-purple), var(--cyan) 90%); */
 }
 
 .box h2 {
     color: var(--black);
+    font-size: 2em;
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    margin-top: 0;
 }
 
 .flag {
@@ -154,12 +192,129 @@ h2 {
     width: 100vw;
 }
 
+.vertical-flag {
+    display: none;
+}
+
+.thin {
+    height: 5px;
+    margin: 5px 0;
+    width: 100%;
+}
+
 .rainbow {
     height: 20px;
+}
+
+.artist-intro {
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    width: auto;
+    /* height: 500px; */
+    /* border: 2px solid var(--black); */
+    margin: 1em 0;
+    clip-path: polygon(5% 5%, 100% 0%, 95% 95%, 0% 100%);
+    background-image: url(assets/backgrounds/back_box.png);
+    background-size: cover;
+    margin: 0 1em;
+    padding: 2em;
+}
+
+.artist-intro:last-of-type {
+    margin-bottom: -3em;
+}
+
+.artist-photos {
+    width: 15em;
+    height: 15em;
+    clip-path: polygon(5% 5%, 90% 0%, 100% 15%, 95% 95%, 10% 100%, 0% 85%);
+    /* border-radius: 50%;
+    overflow: hidden; */
+}
+
+.artist-intro h2 {
+    color: var(--black);
+    margin: 10px 0 0 0;
+}
+
+.artist-genre {
+    margin: 0 0 10px 0;
+}
+
+.artist-description {
+    font-weight: 600;
+}
+
+.metros {
+    display: flex;
+    gap: 25px;
+    margin: 0.5em 0 0 0;
+}
+
+iframe {
+    max-width: 95%;
+    margin: 1em 0;
+}
+
+.social-icon {
+    height: 3rem;
+    margin: 1em;
 }
 
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+@media screen and (min-device-width: 480px) {
+    .content {
+        margin: 0.2em 20%;
+        padding: 0.5em 0;
+    }
+
+    .button {
+        max-width: 40%;
+    }
+
+    .box,
+    .flag {
+        width: 70%;
+    }
+
+    .box {
+        position: relative;
+    }
+
+    .artists {
+        display: flex;
+        width: 120%;
+        margin: 1em 0;
+        margin-bottom: -1em;
+    }
+
+    .artist-intro:last-of-type {
+        margin-bottom: initial;
+    }
+    
+    .vertical-flag {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(assets/backgrounds/vertical_rainbow.svg);
+        background-repeat: repeat-y;
+        background-size: 20px;
+        margin-top: -1em;
+    }
+
+    .vertical-flag:first-of-type {
+        background-position: left;
+    }
+    .vertical-flag:last-of-type {
+        background-position: right;
+    }
 }
