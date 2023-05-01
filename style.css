@@ -228,13 +228,13 @@ h2 {
     clip-path: polygon(5% 5%, 100% 0%, 95% 95%, 0% 100%);
     background-color: var(--beige);
     /* background-image: linear-gradient(
-            var(--light-purple) 0.1em,
-            transparent 0.1em
+        var(--light-purple) 0.1em,
+        transparent 0.1em
         ),
         linear-gradient(90deg, var(--light-purple) 0.1em, transparent 0.1em);
-    background-size: 2em 2em;
-    /* background-image: url(assets/backgrounds/back_box.png);
-    background-size: cover; */
+        background-size: 2em 2em;
+        /* background-image: url(assets/backgrounds/back_box.png);
+        background-size: cover; */
     margin: 0 1em;
     padding: 2em;
 }
@@ -249,7 +249,7 @@ h2 {
     clip-path: polygon(5% 5%, 90% 0%, 100% 15%, 95% 95%, 10% 100%, 0% 85%);
     object-fit: cover;
     /* border-radius: 50%;
-    overflow: hidden; */
+        overflow: hidden; */
 }
 
 .artist-intro h2 {
@@ -288,23 +288,22 @@ header {
 }
 
 @media screen and (min-width: 600px) {
-
     @keyframes slidein {
         from {
-          margin-left: -100%;
+            margin-left: -100%;
         }
         to {
-          margin-left: 0%;
+            margin-left: 0%;
         }
-      }
+    }
     @keyframes slideout {
         from {
-          margin-left: 0%;
+            margin-left: 0%;
         }
         to {
-          margin-left: -100%;
+            margin-left: -100%;
         }
-      }
+    }
 
     #rainbow-separator {
         display: block;
@@ -369,7 +368,7 @@ header {
         transition: color 500ms;
         transition-delay: 500ms;
     }
-    
+
     .button-colors {
         position: absolute;
         display: flex;
@@ -380,7 +379,7 @@ header {
         left: 0%;
         z-index: -1;
     }
-    
+
     .button-color {
         width: 100%;
         height: 17%;
@@ -499,5 +498,11 @@ header {
 
     iframe {
         width: 52%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .button {
+        max-width: none;
     }
 }
