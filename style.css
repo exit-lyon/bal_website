@@ -287,7 +287,7 @@ header {
     justify-content: space-between;
 }
 
-@media screen and (min-device-width: 480px) {
+@media screen and (min-width: 600px) {
 
     @keyframes slidein {
         from {
@@ -455,13 +455,15 @@ header {
 
     .artists {
         display: flex;
-        width: 70%;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
         margin: 1em 0;
         margin-bottom: -1em;
     }
 
     .artist-intro {
-        width: 35em;
+        width: 20em;
     }
 
     .artist-social-icon:hover {
