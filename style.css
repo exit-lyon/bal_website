@@ -78,7 +78,7 @@ li {
 }
 
 li::before {
-    content: ">";
+    content: "-";
     padding-right: 5px;
 }
 
@@ -101,14 +101,19 @@ h1 {
 }
 
 h2 {
-    color: var(--light-yellow);
+    color: var(--black);
     font-size: 1.5em;
     margin: 10px;
     line-height: 1.25em;
 }
 
 #rainbow-separator {
-    display: none;
+    display: block;
+    height: 10px;
+    display: flex;
+    background-image: url(assets/misc/rainbow.svg);
+    background-repeat: repeat;
+    background-size: contain;
 }
 
 .italic {
@@ -163,9 +168,9 @@ h2 {
     display: none;
 }
 
-.logos {
+.exit-logo {
     margin: 0.5em 0;
-    width: 7em;
+    width: 8rem;
 }
 
 .box {
@@ -281,11 +286,36 @@ iframe {
     margin: 1em;
 }
 
+.socials .social-icon {
+    height: 2.5rem;
+}
+
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
+.logos-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin: 1em 0;
+}
+
+.partner-logo {
+    height: 4em;
+}
+
+.footer-h2 {
+    font-size: 2em;
+}
+
+#logo-volvo {
+    height: 26px;
+  }
 
 @media screen and (min-width: 600px) {
     @keyframes slidein {
@@ -303,15 +333,6 @@ header {
         to {
             margin-left: -100%;
         }
-    }
-
-    #rainbow-separator {
-        display: block;
-        height: 10px;
-        display: flex;
-        background-image: url(assets/misc/rainbow.svg);
-        background-repeat: repeat;
-        background-size: contain;
     }
 
     #poster_y {
