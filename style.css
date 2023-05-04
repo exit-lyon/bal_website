@@ -45,6 +45,9 @@ body {
     margin: 0;
     color: var(--black);
     background-color: var(--light-purple);
+    background-image: url(assets/backgrounds/poster_y.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
 }
 
 main {
@@ -162,6 +165,11 @@ h2 {
 #poster_y,
 #poster_x {
     width: 100%;
+}
+
+#poster_y {
+    display: block;
+    opacity: 0;
 }
 
 #poster_x {
@@ -339,8 +347,15 @@ header {
         display: none;
     }
 
+    body {
+        background-image: url(assets/backgrounds/poster_x.jpg);
+        background-size: 100%;
+        background-attachment: fixed;
+    }
+
     #poster_x {
         display: block;
+        opacity: 0;
     }
 
     .content {
