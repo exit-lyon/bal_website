@@ -51,14 +51,16 @@ body {
 }
 
 main {
-    /* height: 500vh; */
     background: linear-gradient(0deg, var(--magenta), var(--light-purple));
     background-image: url(assets/backgrounds/low_poly_back_vertical.svg);
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: baseline;
+    position: relative;
+    z-index: 1;
 }
+
 
 a {
     text-decoration: none;
@@ -138,6 +140,14 @@ h2 {
 .content {
     padding: 1.5em 0;
     position: relative;
+}
+
+.blur {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    backdrop-filter: blur(50px);
 }
 
 .button {
@@ -240,6 +250,8 @@ h2 {
     margin: 1em 0;
     clip-path: polygon(5% 5%, 100% 0%, 95% 95%, 0% 100%);
     background-color: var(--beige);
+    background-image: url(assets/backgrounds/box_background.svg);
+    background-size: cover;
     /* background-image: linear-gradient(
         var(--light-purple) 0.1em,
         transparent 0.1em
@@ -533,7 +545,15 @@ header {
     }
 
     iframe {
-        width: 52%;
+        width: 40%;
+    }
+
+    .logos-wrapper {
+        max-width: 50%;
+    }
+
+    .blur {
+        backdrop-filter: none;
     }
 }
 
