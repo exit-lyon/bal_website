@@ -273,8 +273,6 @@ h2 {
     height: 15em;
     clip-path: polygon(5% 5%, 90% 0%, 100% 15%, 95% 95%, 10% 100%, 0% 85%);
     object-fit: cover;
-    /* border-radius: 50%;
-        overflow: hidden; */
 }
 
 .artist-intro h2 {
