@@ -61,7 +61,6 @@ main {
     z-index: 1;
 }
 
-
 a {
     text-decoration: none;
     color: inherit;
@@ -231,7 +230,7 @@ h2 {
 .thin {
     height: 5px;
     margin: 5px 0;
-    width: 100%;
+    width: 0%;
 }
 
 .rainbow {
@@ -245,22 +244,13 @@ h2 {
     justify-content: baseline;
     align-items: center;
     width: auto;
-    /* height: 500px; */
-    /* border: 2px solid var(--black); */
-    margin: 1em 0;
+    margin: 1em;
+    opacity: 0;
+    transform: translate(-10%);
     clip-path: polygon(5% 5%, 100% 0%, 95% 95%, 0% 100%);
     background-color: var(--beige);
     background-image: url(assets/backgrounds/box_background.svg);
     background-size: cover;
-    /* background-image: linear-gradient(
-        var(--light-purple) 0.1em,
-        transparent 0.1em
-        ),
-        linear-gradient(90deg, var(--light-purple) 0.1em, transparent 0.1em);
-        background-size: 2em 2em;
-        /* background-image: url(assets/backgrounds/back_box.png);
-        background-size: cover; */
-    margin: 0 1em;
     padding: 2em;
 }
 
@@ -333,7 +323,12 @@ header {
 
 #logo-volvo {
     height: 26px;
-  }
+}
+
+.scrolled {
+    width: 100%;
+    transition: all 1000ms;
+}
 
 @media screen and (min-width: 600px) {
     @keyframes slidein {
@@ -509,6 +504,8 @@ header {
 
     .artist-intro {
         width: 20em;
+        opacity: 1;
+        transform: translate(0%);
     }
 
     .artist-social-icon:hover {
@@ -559,5 +556,19 @@ header {
 @media screen and (max-width: 1000px) {
     .button {
         max-width: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .artist-appear {
+        opacity: 1;
+        transform: translate(0%);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .artist-appear {
+            transition: all 0.75s ease-in-out;
+            transition-delay: 100ms;
+        }
     }
 }
