@@ -81,6 +81,10 @@ li {
     font-weight: 600;
 }
 
+ul {
+    margin: 1em 0;
+}
+
 li::before {
     content: "-";
     padding-right: 5px;
@@ -92,7 +96,7 @@ li {
     text-indent: -1em;
 }
 
-b {
+em {
     font-weight: 750;
     font-style: oblique;
     color: var(--black);
@@ -107,7 +111,7 @@ h1 {
 h2 {
     color: var(--black);
     font-size: 1.5em;
-    margin: 10px;
+    margin: 5px;
     line-height: 1.25em;
 }
 
@@ -139,6 +143,10 @@ h2 {
 .content {
     padding: 1.5em 0;
     position: relative;
+}
+
+.reduce-padding {
+    padding-top: 0;
 }
 
 .blur {
