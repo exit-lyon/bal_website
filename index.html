@@ -1,351 +1,242 @@
-<!DOCTYPE html>
-<html lang="fr">
+  <!DOCTYPE html>
+  <html lang="fr">
 
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords"
-        content="Bal, Lyon, Fiertés, LGBT, Bal des Fiertés, Pride, LGBTQIA+, Exit, INSA, Bal des Fiertés de Lyon, Bal Fiertés Lyon, Bal Pride, Villeurbanne, Doua, Association">
-    <meta name="description"
-        content="Decouvrez le programme du Bal des Fiertés de Lyon 2023, organisé par EXIT ! Le Bal des Fiertés a lieu le samedi 3 juin 2023 à l'Hôtel de Ville de Lyon, et l'entrée est gratuite.">
-    <meta name="author" content="EXIT" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://baldesfierteslyon.fr/" />
-    <meta property="og:title" content="Bal des Fiertés de Lyon" />
-    <meta property="og:description" content="Decouvrez le programme du Bal des Fiertés de Lyon 2023, organisé par EXIT ! Le Bal des Fiertés a lieu le samedi 3 juin 2023 à l'Hôtel de Ville de Lyon, et l'entrée est gratuite." />
-    <meta property="og:image" content="https://baldesfierteslyon.fr/assets/backgrounds/poster_x.jpg" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/favicon.ico">
+    <meta name="description" content="Site internet de la Semaine des Arts & Sciences Queer." />
+    <meta name="author" content="Benoit Renault" />
     <title>Bal des Fiertés de Lyon</title>
-</head>
+    <link rel="icon" type="image/x-icon" href="assets/logos/favicon.webp" />
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/leaflet.css"/>
+  </head>
 
-<body>
-    <header>
-        <img id="poster_y" src="assets/backgrounds/poster_y.jpg"
-            alt="Affiche du bal des Fiertés de Lyon 2023. Sur fond violet/mauve avec de lègeres teintes rouges et vertes, un grand arc-en-ciel descend du haut de l'affiche. Deux couples dansent sur l'arc-en-ciel. A côté, il est écrit 'Bal des fiertés' avec 'Ouvert à toutes et à tous' en sous-titre. En haut à gauche, il est écrit 'Lyon, Hôtel de Ville, 3 juin - 19h - 23h'.">
-        <img id="poster_x" src="assets/backgrounds/poster_x.jpg"
-            alt="Affiche du bal des Fiertés de Lyon 2023. Sur fond violet/mauve avec de lègeres teintes rouges et vertes, un grand arc-en-ciel descend du haut de l'affiche. A côté, il est écrit 'Bal des fiertés' avec 'Ouvert à toutes et à tous' en sous-titre. En bas à gauche, il est écrit 'Lyon, Hôtel de Ville, 3 juin - 19h - 23h'.">
-    </header>
-    <div id="rainbow-separator"></div>
-    <main>
-        <div class="blur"></div>
-        <div class="wrapper">
-            <section class="content">
-                <h1 class="italic">Le Bal des Fiertés de Lyon revient en 2023 !</h1>
-                <p>Les couleurs sont à l'honneur ! Prépare ta tenue la plus teintée et rejoins-nous le <em>samedi 3 juin
-                        à
-                        partir de 19h à l'Hôtel de Ville de Lyon</em> pour une soirée dansante mémorable !</p>
-                <p><b>Toutes les places pour le Bal ont été réservées, la billeterie est close</b>. Merci pour votre
-                    soutien !
-                    Si vous vous êtes inscrits sur liste d'attente et que <b>vous n'avez pas reçu de mail confirmant
-                        votre
-                        place, <em>votre place n'est pas valide</em></b>. Nous espérons pouvoir vous accueillir sur le
-                    Bal des Fiertés de
-                    l'an prochain !</p>
-                <!-- <div class="button" onclick="location.href = 'https:\/\/www.example.com';">
-                    <div class="button-colors">
-                        <div class="color-red button-color"></div>
-                        <div class="color-orange button-color"></div>
-                        <div class="color-yellow button-color"></div>
-                        <div class="color-green button-color"></div>
-                        <div class="color-blue button-color"></div>
-                        <div class="color-purple button-color"></div>
-                    </div>
-                    <a href="https://www.helloasso.com/associations/exit/evenements/inscription-au-bal-des-fiertes">
-                        Réserver sa place gratuitement</a>
-                </div> -->
+  <body>
+    <img id="main-image" src="assets/landscape.jpg" alt="Image principale de la Semaine des Arts&Sciences Queer, représentant un bateau orné d'une sirène barbue en figure de proue, naviguant dans la nuit sur une mer colorée. Su les voiles, la date est indiquée du 2 au 7 mai, et le nom de de la 1ère édition : 'Hissons les Couleurs !'. Dans le fond, un arc-en-ciel indique 'Conférences Scientifiques en Journée' et 'Représentations Artistiques en soirée'.">
 
-                <p class="italic">Si vous ne pouvez pas venir alors que vous avez déjà
-                    réservé votre place, contactez-nous <a href="mailto:exit\[at\}listes.insa-lyon.fr">par
-                        mail</a> afin que nous puissions réattribuer la place à un-e
-                    autre chanceux-se.</p>
-            </section>
-
-            <div class="flag"></div>
-            <article class="box">
-                <div class="vertical-flag"></div>
-                <h2>Vous avez dit Bal des Fiertés ?</h2>
-                <p>Le temps d'une soirée, l'Hôtel de Ville de Lyon accueille le Bal le plus coloré de l'année !</p>
-                <p>Au programme : concert dansant, repas vegétarien local, village associatif, espace
-                    chill et espace
-                    prévention !</p>
-                <p>Le Bal est un évènement inclusif, gratuit et ouvert à toustes, sans distinction. L'inscription est
-                    obligatoire. N'oubliez pas de
-                    réserver votre place, c'est gratuit !</p>
-                <div class="vertical-flag"></div>
-            </article>
-            <div class="flag"></div>
-
-            <section class="content">
-                <h1> Les artistes </h1>
-                <div class="flag thin"></div>
-                <p>A travers ce Bal, nous tenons à mettre en avant des artistes Queer, locaux et peu connus du grand
-                    public. Découvrez les quatre artistes qui vous feront danser pendant cette soirée !</p>
-                <p>Pensez à consulter leurs réseaux sociaux !</p>
-                <div class="artists">
-                    <div class="artist-intro">
-                        <img class="artist-photos" src="assets/photos/centuries.jpg" alt="">
-                        <h2>Centuries</h2>
-                        <p class="artist-genre italic">Pop, Rock, Funk</p>
-                        <p class="artist-description">Centuries est un jeune groupe d'étudiant-e-s de l'INSA au talent
-                            plus que prometteur. Leurs reprises sauront animer la soirée et vous faire danser jusqu'au
-                            bout de la nuit !</p>
-                        <a href="https://www.instagram.com/centuriesband/"><img
-                                src="assets/logo/Instagram_Glyph_Gradient_RGB.svg" alt="Compte Instagram de Centuries"
-                                class="social-icon artist-social-icon"></a>
-                    </div>
-                    <div class="artist-intro">
-                        <img class="artist-photos" src="assets/photos/coeur.jpg" alt="">
-                        <h2>Coeur</h2>
-                        <p class="artist-genre italic">Trap Romantique Hyperpop</p>
-                        <p class="artist-description">Cœur célèbre le paradoxe et la créativité. Voix crunchy, charnelle
-                            et joueuse, elle fait vivre une musique poétique qui
-                            refuse de choisir entre violence et douceur, entre force et fragilité. Artiste, auteure et
-                            chanteuse, Cœur provoque autant qu'elle charme.
-                        </p>
-                        <div>
-                            <a href="https://www.instagram.com/coeurkokoro/"><img
-                                    src="assets/logo/Instagram_Glyph_Gradient_RGB.svg" alt="Compte Instagram de Coeur"
-                                    class="social-icon artist-social-icon"></a>
-                            <a href="https://www.youtube.com/@Coeurkokoro/"><img
-                                    src="assets/logo/YouTube_full-color_icon.svg" alt="Compte YouTube de Coeur"
-                                    class="social-icon artist-social-icon"></a>
-                        </div>
-                    </div>
-                    <div class="artist-intro">
-                        <img class="artist-photos" src="assets/photos/Pamela-1.jpg" alt="">
-                        <h2>DJ Pompompom</h2>
-                        <p class="artist-genre italic">Afro, Latino, classiques 90/2000</p>
-                        <p class="artist-description">Un voyage spatial et temporel entre les différents styles qui ont
-                            vu grandir DJ Pompompom : du reggaeton portoricain à l'afrobeat nigérian en passant
-                            évidemment par les rythmes du Cap-Vert, le tout avec une touche de nostalgie.
-                        </p>
-                        <div>
-                            <a href="https://www.instagram.com/djpompompom/"><img
-                                    src="assets/logo/Instagram_Glyph_Gradient_RGB.svg"
-                                    alt="Compte Instagram de DJ Pompompom" class="social-icon artist-social-icon"></a>
-                            <a href="https://www.facebook.com/djpompompom/"><img src="assets/logo/Facebook_f_logo.svg"
-                                    alt="Compte Facebook de DJ Pompompom" class="social-icon artist-social-icon"></a>
-                        </div>
-                    </div>
-                    <div class="artist-intro">
-                        <img class="artist-photos" src="assets/photos/pleureuses.jpg" alt="">
-                        <h2>Les Pleureuses</h2>
-                        <p class="artist-genre italic">Drag, Lip Sync, Chant</p>
-                        <p class="artist-description">Un quatuor de créatures flamboyantes composé de Edeha Noire,
-                            Foutrine, Baby Gamma et Catherine Baise-en-ville, venant probablement d'une région
-                            intergalactique obscure, humide et douteuse... Préparez vos éventails et vos mouchoirs,
-                            parce qu'elles vont vous faire voyager dans le monde tumultueux des émotions.
-                        </p>
-                        <div>
-                            <a href="https://www.instagram.com/les.pleureuses.collectif/"><img
-                                    src="assets/logo/Instagram_Glyph_Gradient_RGB.svg"
-                                    alt="Compte Instagram du collectif Les Pleureuses"
-                                    class="social-icon artist-social-icon"></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="content">
-                <h1>La restauration</h1>
-                <div class="flag thin"></div>
-                <p>Découvrez le buffet préparé avec amour par nos bénévoles. Pour 5 euros, vous avez accès à une
-                    <b>assiette végétarienne et locale à composer</b>. Les boissons sont gratuites pour toustes, et sans
-                    alcool !
-                </p>
-                <h2>Le Menu</h2>
-                <p><b>~ Légumes crus ~</b></p>
-                <p>Bâtonnets de carottes et de concombres, tomates cerises, radis</p>
-                <p><b>~ Sauces ~</b></p>
-                <p>Tsatziki, houmous et sauce salsa</p>
-                <p><b>~ Accompagnement ~</b></p>
-                <p>Pain et chips</p>
-                <p><b>~ Fruits ~</b></p>
-                <p>Fraise, melon, pèche et pastèque</p>
-                <p><b>~ Cakes ~</b></p>
-                <p>Cake au yaourt et cake au chocolat</p>
-                <p><b>~ Boissons ~</b></p>
-                <p>Cocktails sans alcools</p>
-            </section>
-
-            <section class="content reduce-padding">
-                <h1>Une action de prévention</h1>
-                <div class="flag thin"></div>
-                <p>Le Bal des Fiertés, c'est aussi une <em>grande action de prévention</em>. Nous avons à coeur de faire
-                    du Bal
-                    un
-                    endroit <em>accessible et sûr pour toutes et tous</em>.</p>
-                <ul>
-                    <li>Les associations de prévention seront présentes pour <em>répondre à toutes
-                            vos questions</em> concernant la santé mentale et sexuelle, les discriminations, et
-                        <em>distribuer gratuitement du matériel de prévention</em> (préservatifs, lubrifiant, digues
-                        buccales,
-                        etc).
-                    </li>
-                    <li>Les repas sont <em>végétariens</em> et toutes les boissons servies sont <em>sans
-                            alcool</em>. Les boissons sont gratuites.</li>
-                    <li>Les boissons seront servies avec des <em>protections de verres</em> et des pailles
-                        réutilisables.
-                    </li>
-                    <li>Toutes les photos prises lors du bal seront traitées afin <em>d'éviter l'outing public</em>.
-                    </li>
-                    <li>Le Bal est accessible aux personnes à mobilité réduite.</li>
-                </ul>
-            </section>
-
-            <div class="flag"></div>
-            <article class="box">
-                <div class="vertical-flag"></div>
-                <h2>Espace chill</h2>
-                <p>Vous avez envie de profiter du Bal, mais vous aimez aussi le calme et la sérénité ? Pas de panique,
-                    un espace calme et loin du concert sera à votre disposition !</p>
-                <p>Jeux de société, stand photo et espace prévention, tout sera prévu pour un bal plus
-                    chill.</p>
-                <p>Vous pourrez aussi admirer l'exposition "Se voir et être vus : de l'imaginaire aux identités queer",
-                    créée dans le cadre de la <a href="https://sassqueer.fr">Semaine des Arts & Sciences Queer</a>.</p>
-                <p>Des protections auditives seront également mises à disposition aux stands prévention.</p>
-                <div class="vertical-flag"></div>
-            </article>
-            <div class="flag"></div>
-
-            <section class="content">
-                <h1>Informations pratiques</h1>
-                <div class="flag thin"></div>
-                <h2>Entrée</h2>
-                <p>Les billets seront controlés et les tickets repas vous seront restitués à l'entrée. </p>
-                <p>Un vestiaire sera à disposition gratuitement.</p>
-                <h2>Accès</h2>
-                <p>Hôtel de Ville de Lyon, 1 Pl. de la Comédie, 69001 Lyon</p>
-                <p>Métro : lignes A et C (arrêt Hôtel de Ville)</p>
-                <div class="metros">
-                    <img src="assets/logo/Metro_A_1.svg" alt="Logo du metro A de Lyon.">
-                    <img src="assets/logo/Metro_C_1.svg" alt="Logo du metro C de Lyon.">
-                </div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2783.1977664761753!2d4.8339977!3d45.7672267!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea473ab70d0b%3A0x712d7fa96d045491!2sH%C3%B4tel%20de%20Ville%20de%20Lyon!5e0!3m2!1sfr!2sfr!4v1682863730403!5m2!1sfr!2sfr"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-            </section>
-
-            <footer class="content reduce-padding">
-                <section class="content reduce-padding">
-
-                    <h1>Nos partenaires</h1>
-                    <div class="flag thin"></div>
-                    <p>Le Bal ne pourrait avoir lieu sans l'aide de nos nombreux partenaires. Nous tenons
-                        particulièrement à les
-                        remercier du soutien qu'ils nous apportent.</p>
-
-                    <h2 class="footer-h2">Institutions</h2>
-                    <div class="logos-wrapper">
-                        <a href="https://insa-lyon.fr/"><img src="./assets/partners/insa.png" class="partner-logo"
-                                alt="Logo de l'INSA de Lyon"></a>
-                        <a href="https://portail.asso-insa-lyon.fr/"><img src="./assets/partners/vainsa.png"
-                                class="partner-logo" alt="Logo du comité de la vie associative de l'INSA de Lyon"></a>
-                        <a href="https://www.crous-lyon.fr/"><img src="./assets/partners/crouslyon.png"
-                                class="partner-logo" alt="Logo du Crous de Lyon"></a>
-                        <a href="https://www.lyon.fr/"><img src="./assets/partners/VDL-logo.jpg" class="partner-logo"
-                                alt="Logo de la ville de Lyon"></a>
-                        <a href="https://fondation.insa-lyon.fr/"><img src="./assets/partners/fondationinsa.png"
-                                class="partner-logo" alt="Logo de la fondation INSA Lyon"></a>
-                        <a href="https://www.alumni-insa-lyon.org/"><img src="./assets/partners/alumniinsa.png"
-                                class="partner-logo" alt="Logo des alumnis INSA Lyon"></a>
-                    </div>
-
-                    <h2 class="footer-h2">Entreprises</h2>
-                    <div class="logos-wrapper">
-                        <a href="https://www.accenture.com/"><img src="./assets/partners/accenture.png"
-                                class="partner-logo" alt="Logo d'Accenture"></a>
-                        <a href="https://www.volvocars.com/"><img src="./assets/partners/volvo.png" class="partner-logo"
-                                id="logo-volvo" alt="Logo de Volvo"></a>
-                        <a href="https://www.renault-trucks.com/"><img src="./assets/partners/renaultrucks.svg"
-                                class="partner-logo" alt="Logo de Renault Trucks"></a>
-                    </div>
-                    <p>
-                        En association avec V-Eagle, réseau LGBTQI+ interne au groupe VOLVO
-                    </p>
-                    <div class="logos-wrapper">
-                        <img src="./assets/partners/v-eagle.png" class="partner-logo" alt="Logo de V-Eagle">
-                    </div>
-                    <h2 class="footer-h2">Associations</h2>
-                    <div class="logos-wrapper">
-                        <a href="https://www.autrecercle.org/"><img src="./assets/partners/autrecercle.png"
-                                class="partner-logo" alt="Logo de l'assocation L'Autre Cercle"></a>
-                        <a href="https://www.fierte.net/"><img src="./assets/partners/cfl.png" class="partner-logo"
-                                alt="Logo du CFL"></a>
-                        <a href="https://www.avenir-sante.com/"><img src="./assets/partners/avenirsante.webp"
-                                class="partner-logo" alt="Logo d'Avenir Santé"></a>
-                        <a href="https://www.centrelgbtilyon.org/"><img src="./assets/partners/centrelgbt.png"
-                                class="partner-logo" alt="Logo du Centre LGBTI+"></a>
-                        <a href="https://www.nightline.fr/"><img src="./assets/partners/nightline.png"
-                                class="partner-logo" alt="Logo de Nightline"></a>
-                        <a href="https://le-refuge.org/"><img src="./assets/partners/lerefuge.png" class="partner-logo"
-                                alt="Logo du Refuge de Lyon"></a>
-                        <a href="https://nextgaymer.com/"><img src="./assets/partners/nextgaymer.png"
-                                class="partner-logo" alt="Logo de Next Gaymer"></a>
-                        <a href="https://frisse-76.webself.net/"><img src="./assets/partners/frisse.png"
-                                class="partner-logo" alt="Logo de Frisse"></a>
-                        <a href="https://www.enipse.fr/"><img src="./assets/partners/enipse.png" class="partner-logo"
-                                alt="Logo d'Enipse"></a>
-                        <a href="https://www.sos-homophobie.org/"><img src="./assets/partners/soshomophobie.png"
-                                class="partner-logo" alt="Logo de Sos Homophobie"></a>
-                        <a href="https://cinelamouette.fr/"><img src="./assets/partners/cinelamouette.png"
-                                class="partner-logo" alt="Logo de Cine la Mouette"></a>
-                        <a href="https://clubelek.fr/"><img src="./assets/partners/clubelek.png" class="partner-logo"
-                                alt="Logo du Clubelek"></a>
-                        <a href="https://www.facebook.com/CulinariumINSA"><img src="./assets/partners/culinarium.png"
-                                class="partner-logo" alt="Logo du Culinarium"></a>
-                        <a href="https://cluji.fr/"><img src="./assets/partners/cluji.png" class="partner-logo"
-                                alt="Logo du Cluji"></a>
-                        <a href="https://rotonde.asso-insa-lyon.fr/"><img src="./assets/partners/cgr.png"
-                                class="partner-logo" alt="Logo de la CGR"></a>
-                        <a href="https://www.instagram.com/karnaval_humanitaire_solidaire/"><img
-                                src="./assets/partners/karnaval.png" class="partner-logo"
-                                alt="Logo du Karnaval Humanitaire et Solidaire"></a>
-                        <a href="https://www.24heures.org/"><img src="./assets/partners/24h.svg" class="partner-logo"
-                                alt="Logo des 24h de l'INSA"></a>
-                        <a href="https://www.instagram.com/kls_lyon/"><img src="./assets/partners/kls.png"
-                                class="partner-logo" alt="Logo de KLS Lyon"></a>
-                    </div>
-                </section>
-
-                <section class="content reduce-padding">
-                    <h1>Nous contacter</h1>
-                    <div class="flag thin"></div>
-
-                    <p>Le Bal des Fiertés vous est proposé par EXIT, l'association LGBT+ du campus de la Doua à
-                        Villeurbanne.</p>
-                    <img class="exit-logo" src="assets/logo/exit_rond.png" alt="Logo d'Exit.">
-                    <div class="socials">
-                        <a href="https://www.instagram.com/exit_lyon/"><img src="assets/logo/Instagram_Glyph_White.svg"
-                                alt="Compte Instagram d'EXIT" class="social-icon"></a>
-                        <a href="https://twitter.com/Exit_Lyon"><img src="assets/logo/twitter_white.svg"
-                                alt="Compte Twitter d'EXIT" class="social-icon"></a>
-                        <a href="https://fr-fr.facebook.com/exit.lyon"><img src="assets/logo/f-Logo_White.svg"
-                                alt="Compte Facebook d'EXIT" class="social-icon"></a>
-                    </div>
-                    <p>Vous pouvez poser vos questions à l'équipe organisatrice <a
-                            href="mailto:exit\[at\}listes.insa-lyon.fr">par
-                            mail</a>, <br>
-                        ou à l'ensemble des membres d'EXIT sur <a href="https://discord.gg/tWPwEU88UF">notre serveur
-                            Discord</a>.
-                    </p>
-                    <p>Envie de communiquer sur l'évènement, ou d'avoir plus de détails sur la soirée ? <br>
-                        Jetez un coup d'oeil a notre <a
-                            href="https://drive.google.com/drive/folders/1Sx187svpm__LjYDmdnSSLZxmAm3Ldhfa?usp=share_link">Dossier
-                            Presse</a> !</p>
-                </section>
-
-                <p>
-                    Copyright &copy; EXIT
-                </p>
-            </footer>
-            <script src="index.js"></script>
+    <div class="bg-zero">
+      <div class="diagonal-box">
+        <div class="content">
+          <h1>Le Bal revient le 1er juin à l'Hôtel de Ville de Lyon !</h1>
+          <h2>Ouvert à toutes et tous, dès 18h30</h2>
+          <p class="intro skew">
+            <a href="https://www.helloasso.com/associations/centre-lgbti-lyon/evenements/bal-des-fiertes"> > Je réserve ma place ! < </a>
+          </p>
         </div>
-    </main>
-</body>
+      </div>
+    </div>
 
-</html>
+    <div class="diagonal-box bg-one">
+      <div class="content">
+
+        <h2>Vous avez dit Bal des Fiertés ?</h2>
+        <p>
+          Le temps d'une soirée, l'Hôtel de Ville de Lyon accueille le Bal le plus coloré de l'année !
+        </p>
+        <p>
+          Au programme : concert dansant, repas vegétarien et cocktails, village associatif, espace chill et espace prévention !
+        </p>
+        <p>
+          Le Bal est un évènement <b>inclusif</b>, <b>gratuit</b> et <b>ouvert</b> à toustes, sans distinction. L'inscription est obligatoire : n'oubliez donc pas de réserver votre place !
+        </p>
+      </div>
+    </div>
+
+    <div class="diagonal-box bg-two">
+      <div class="content">
+
+        <h2>Les Artistes</h2>
+        <div class="stars">***</div>
+
+        <div class="artists">
+          <div class="artist-intro artist-appear">
+              <img class="artist-photos" src="assets/artistes/briochee.jpg" alt="">
+              <h3>La Briochée</h3>
+              <p class="artist-description">
+                Comédienne de doublage et chanteuse extraordinaire (avez-vous avez écouté sa version d'<a href="https://youtu.be/QMc2wXZWElE?t=9">Addict</a> de la série Hazbin Hotel ?!), elle a été révélée au grand public français lors de la saison 1 de Drag Race France.
+              </p>
+              <a href="https://www.instagram.com/la_briochee_off/"><img src="assets/logos/Instagram_Glyph_Gradient_RGB.svg" alt="Compte Instagram de La Briochée" class="social-icon artist-social-icon"></a>
+          </div>
+          <div class="artist-intro artist-appear">
+              <img class="artist-photos" src="assets/artistes/holokid.jpg" alt="">
+              <h3>Holokid</h3>
+              <p class="artist-description">
+                Drag King aux mille talents, tantôt provocateur, tantôt vulnérable, ses chansons rap brisent les codes avec une énergie subversive incroyable et questionnent, défient et célèbrent l'authenticité et la diversité.
+              </p>
+              <div>
+                  <a href="https://www.instagram.com/holokid.xx/"><img src="assets/logos/Instagram_Glyph_Gradient_RGB.svg" alt="Compte Instagram d'Holokid" class="social-icon artist-social-icon"></a>
+              </div>
+          </div>
+          <div class="artist-intro artist-appear">
+              <img class="artist-photos" src="assets/artistes/rita.jpg" alt="">
+              <h3>Rita Kro</h3>
+              <p class="artist-description">
+                Perdu-e quelque part entre la tragédie antique et le RnB, Rita Kro s'est faite connaître avec ses consoeurs dans leur spectacle "Les 12 Travelos d'Hercule", elle saura rendre la soirée festive, populaire et familiale !
+              </p>
+              <div>
+                  <a href="https://www.instagram.com/rita_kro_/"><img src="assets/logos/Instagram_Glyph_Gradient_RGB.svg" alt="Compte Instagram de Rita Kro" class="social-icon artist-social-icon"></a>
+              </div>
+          </div>
+          <div class="artist-intro artist-appear">
+              <img class="artist-photos" src="assets/artistes/cousinade.jpg" alt="">
+              <h3>La Cousinade</h3>
+              <p class="artist-description">
+                Coolectif Drag entre Lyon et Lille composé des inénarrables <a href="https://www.instagram.com/nixeamere/">Nixe Amère</a>, <a href="https://www.instagram.com/rico.loscopia/">Rico Lo Scopia</a>, <a href="https://www.instagram.com/miss_vernita_green/">Vernita Green</a>, <a href="https://www.instagram.com/zanni_lalune/">Zanni Lalune</a> accompagnées de leur formidable photographe <a href="https://www.instagram.com/julianetravers/">Juliane Travers</a>, la Cousinade offre des performances fantastiques et féeriques qui sauront nous faire voyager dans le imaginaires les plus fous !
+              </p>
+              <div>
+                  <a href="https://www.instagram.com/la_cousinade_drag/"><img src="assets/logos/Instagram_Glyph_Gradient_RGB.svg" alt="Compte Instagram du collectif La Cousinade" class="social-icon artist-social-icon"></a>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+    <div id="prevention" class="diagonal-box bg-three">
+      <div class="content">
+
+        <h2>Une action de prévention</h2>
+        <div class="stars">***</div>
+        
+        <p>
+          Le Bal des Fiertés, c'est aussi une <b>grande action de prévention</b>. Nous avons à coeur de faire du Bal un endroit <b>accessible et sûr pour toutes et tous</b>. À cette fin :
+        </p>
+        <ul>
+            <li>
+              Des associations de prévention seront présentes pour <b>répondre à toutes vos questions</b> concernant la santé mentale et sexuelle, les discriminations, et <b>distribuer gratuitement du matériel de prévention</b> (préservatifs, lubrifiant, digues buccales, etc.).
+            </li>
+            <li>
+              Les boissons seront servies avec des <b>protections de verres</b> et des pailles réutilisables.
+            </li>
+            <li>
+              Toutes les photos prises lors du bal seront traitées avec le plus grand soin afin <b>d'éviter l'outing public</b>.
+            </li>
+            <li>Le Bal est accessible aux personnes à mobilité réduite.</li>
+        </ul>    
+      </div>
+    </div>
+
+    <div class="diagonal-box bg-one">
+      <div class="content">
+        
+        <h2>Espace chill</h2>
+        <div class="stars">***</div>
+
+        <p>
+          Vous avez envie de profiter du Bal, mais vous aimez aussi le calme et la sérénité ? Pas de panique, un espace calme et séparé du concert sera à votre disposition !
+        </p>
+        <p>
+          Jeux de société, jeux vidéo, et espace prévention, tout sera prévu pour un bal plus chill.
+        </p>
+        <p>
+          Des protections auditives seront également mises à disposition aux stands prévention.
+        </p>
+      </div>
+    </div>
+
+    <div class="diagonal-box bg-two">
+      <div class="content">
+        <h2>Informations pratiques</h2>
+        <div class="stars">***</div>
+
+        <h3>Accueil</h3>
+
+        <p>L'entrée se fera sur présentation du billet nominatif avec une contrôle de pièce d'identité (et fouille de sac, si applicable), au vu du de l'élévation du Plan Vigipirate au niveau "urgence attentat".</p>
+        
+        <p>Un vestiaire sera à disposition gratuitement.</p>
+        
+        <h3>Accès</h3>
+
+        <p>L'accès public sera situé à l'entrée principale, en face de l'Opéra à l'adresse :</p>
+
+        <p>
+          Hôtel de Ville de Lyon
+          <br>
+          1 Place de la Comédie
+          <br>
+          69001 Lyon
+        </p>
+        
+        <p>Métro : <img src="assets/logos/Metro_A_1.svg" alt="Logo du metro A de Lyon."> et <img src="assets/logos/Metro_C_1.svg" alt="Logo du metro C de Lyon."> (arrêt Hôtel de Ville)</p>
+        
+        <div id="map"></div>
+      </div>
+    </div>
+
+    <div class="clip-path">
+      <div class="content">
+        <div class="exit">
+          <h2>
+            Un événement porté par le Centre LGBTI+ Lyon
+            <br>
+            et l'association Plus Belle la Nuit
+          </h2>
+
+          <div class="logos">
+            <img id="centre-logo" src="./assets/logos/centre.webp">
+            <img id="plus-belle-la-nuit-logo" src="./assets/logos/plus-belle-la-nuit-logo.png">
+          </div>
+
+
+          <p>Et initiallement fondé par EXIT, l'association LGBT+ de l'INSA Lyon</p>
+
+          <img id="exit-logo" src="./assets/logos/exit/2019_rond.png">
+        </div>
+
+        <div class="partners">
+          <h2>Nos partenaires</h2>
+          <p>
+            Ce bal ne pourrait pas avoir lieu sans de nombreux partenaires institutionnels, associatifs et individuels.
+            Nous nous attachons ici à les remercier, en première page, à la vue de toustes.
+          </p>
+
+          <h3>Institutions</h3>
+          <div class="logos">
+            <img src="./assets/logos/institutions/lyon.png" class="logo">
+            <img src="./assets/logos/institutions/insa_white.png" class="logo">
+            <img src="./assets/logos/institutions/va_white.png" class="logo">
+          </div>
+          <!-- <h3>Entreprises</h3>
+          <div class="logos">
+            <img src="" class="logo">
+          </div> -->
+          <h3>Associations & Collectifs</h3>
+          <!-- Assos Extérieures -->
+          <div class="logos">
+            <img src="./assets/logos/assos_autres/nextgaymer.png" class="logo">
+            <img src="./assets/logos/assos_insa/insaesport.png" class="logo">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <h2>Nous contacter</h2>
+
+        <p>
+          Vous pouvez poser vos questions à l'équipe organisatrice <a href="mailto:changerici@centrelgbtilyon.org?body=Afin de lutter contre le spam, l'adresse mail affichée plus haut doit être modifiée en changeant le texte 'changerici' pour 'contact'. Au plaisir de recevoir votre mail.">par mail</a>.
+          <br/>
+          Si vous souhaitez notamment devenir bénévole ou contribuer au bal d'une quelconque autre façon,
+          n'hésitez pas à nous contacter !
+        </p>
+
+        <div class="stars">***</div>
+
+        <div class="socials">
+          <a href="https://www.instagram.com/centrelgbtilyon/"><img src="./assets/icons/icons8-instagram.svg" alt="Compte Instagram du Centre LGBTI+ Lyon" class="social-icon"></a>
+          <a href="https://www.facebook.com/centrelgbtilyon"><img src="./assets/icons/icons8-facebook.svg" alt="Compte Facebook du Centre LGBTI+ Lyon" class="social-icon"></a>
+        </div>
+        <p>
+          Copyright &copy; Centre LGBTI+ Lyon
+        </p>
+      </div>
+    </footer>
+
+    <script src="./js/leaflet.js"></script>
+    <script src="./js/script.js"></script>
+
+  </body>
+
+  </html>
