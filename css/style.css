@@ -144,8 +144,8 @@ h2 {
 }
 
 h3 {
-    font-size: 2em;
-    margin: 0.5em 0;
+    font-size: 1.8em;
+    margin: 1em 0;
     font-weight: 500;
 }
 
@@ -265,6 +265,7 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .logo {
@@ -307,6 +308,11 @@ p {
 
 #plus-belle-la-nuit-logo {
   height: 180px;
+  margin: 25px;
+}
+
+#mairie-lyon-logo { 
+  height: 120px;
   margin: 25px;
 }
 
