@@ -365,3 +365,15 @@ p {
   width: 80%;
   max-width: 300px;
 }
+
+.djs {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.djs div {
+  max-width: 250px;
+}
