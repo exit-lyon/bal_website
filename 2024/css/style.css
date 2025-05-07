@@ -1,0 +1,383 @@
+#main-image {
+  width: 100%;
+  margin-bottom: -5px;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("fonts/Oswald-VariableFont_wght.ttf");
+}
+
+@charset "UTF-8";
+:root {
+  --width: 100vw;
+  --full-width: 100vw;
+  --angle: -5deg;
+  /*-----------------
+  Magic Number Alert:
+
+  the 0.09719 is calculated by this formula:
+  tan(11°) / 2
+  11° is the current skewY value.
+  ------------------*/
+  --magic-number: 0.043744331765;
+  --skew-padding: calc(var(--width) * var(--magic-number));
+  --clip-padding: calc(var(--full-width) * var(--magic-number));
+}
+@media (min-width: 52em) {
+  :root {
+    --width: 52rem;
+  }
+}
+
+.diagonal-box {
+  position: relative;
+  padding: var(--skew-padding) 0;
+  margin-top: -1px;
+}
+.diagonal-box:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: skewy(var(--angle));
+  transform-origin: 50% 0;
+  outline: 1px solid transparent;
+  backface-visibility: hidden;
+}
+
+.bg-zero {
+  background-image: url("../assets/mirror.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width:100%;
+  margin-top: -9px;
+}
+
+.bg-one:before {
+  background-image: linear-gradient(45deg, #ba7efa, #4b5ba6);
+}
+
+.bg-two:before {
+  background-image: linear-gradient(-135deg, #f3b8a8, #f88f7c);
+}
+
+.bg-three:before {
+  background-image: linear-gradient(-135deg, #1d6595, #4b50c6);
+}
+
+.content {
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: 1.5em;
+  position: relative;
+  /* -----------
+  enable the border to see, that the content
+  perfectly fits into the section withou
+  bleeding into the adjecting areas:
+  ------------ */
+}
+
+/* --------------------
+Clip Path Update
+-------------------- */
+.clip-path {
+  position: relative;
+  margin-top: calc( ( var(--clip-padding) * -1 ) - 2px );
+  background-size: 0.5em 0.5em, 100% 100%;
+  padding: calc( ( var(--clip-padding) * 2 ) - ( var(--clip-padding) - var(--skew-padding) ) ) 0 4em;
+  clip-path: polygon(0% calc(var(--clip-padding) * 2), 100% 0%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% calc(var(--clip-padding) * 2), 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* --------------------
+Presentational Styles
+-------------------- */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  transition: font-size 0.2s linear;
+}
+@media (min-width: 70em) {
+  html {
+    font-size: 125%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.9),
+  only screen and (min-device-pixel-ratio: 1.9),
+	only screen and (-o-min-device-pixel-ratio: 19/10),
+	only screen and (min-resolution: 190dpi) {
+	html {
+    font-size: 200%;
+  }
+}
+
+
+body {
+  background: #1e1661;
+  color: #fef6eb;
+  font-family: "Oswald";
+}
+
+h1 {
+  text-align: center;
+  margin: 2em auto 1em;
+  padding: 0 1em;
+  max-width: 42rem;
+  line-height: 1.2;
+  transform: skewY(var(--angle));
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 0 0 0.5em;
+  font-weight: 900;
+  text-align: center;
+}
+
+h3 {
+    font-size: 1.8em;
+    margin: 1em 0;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.5em;
+    margin: 0 0 0.5em;
+    font-weight: 200;
+}
+
+hr {
+  color: #fef6eb;
+}
+
+.stars {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    font-weight: 200;
+}
+
+.skew {
+  transform: skewY(var(--angle));
+}
+
+.intro {
+  font-size: 1.25em;
+  margin: 2rem auto;
+  text-align: center;
+  background: #fef6eb;
+  color: #052626;
+  font-weight: 900;
+  padding: 0.5em;
+  text-transform: uppercase;
+}
+.intro a {
+  background-image: linear-gradient(transparent 90%, 0, #052626 100%);
+  background-image: none;
+  border-bottom: 4px solid;
+  transition: none;
+}
+.intro a:hover {
+  border-color: #f1592a;
+  opacity: 1;
+}
+
+.order-button {
+  font-size: 1.25em;
+  transform: skewY(var(--angle));
+  margin: 0em auto 0em;
+  text-align: center;
+  background: #fef6eb;
+  color: #052626;
+  font-weight: 900;
+  padding: 0.5em;
+  text-transform: uppercase;
+}
+
+li {
+  font-size: 1.25em;
+  margin: 0;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1.25em;
+  margin: 0;
+  line-height: 1.5;
+}
+
+blockquote {
+  font-size: 1.25em;
+  margin: 0.5em 0;
+  line-height: 1.5;
+  text-align: center;
+  font-style: oblique;
+}
+
+p a {
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(transparent 90%, 0, #fef6eb 100%);
+  padding: 0.125em 0;
+  transition: opacity 0.3s ease-out;
+}
+p a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  width: var(--width);
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  height: 3rem;
+  margin: 1rem;
+}
+
+.partners {
+  text-align: center;
+}
+
+/*************************/
+
+.logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  margin: 25px;
+}
+
+.exit {
+  text-align: center;
+}
+
+#exit-logo {
+  height: 100px;
+  margin: 25px;
+}
+
+/* 2024 additions */
+
+.bg-zero h2 {
+  transform: skewY(var(--angle));
+}
+
+body {
+  text-align: center;
+}
+
+p {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#map {
+  height: 400px;
+}
+
+#centre-logo {
+  height: 200px;
+  margin: 25px;
+}
+
+#plus-belle-la-nuit-logo {
+  height: 180px;
+  margin: 25px;
+}
+
+#mairie-lyon-logo { 
+  height: 120px;
+  margin: 25px;
+}
+
+/* ADD SPARKLES */
+.particle {
+  animation: var(--duration) linear var(--delay) var(--iteration) sparkle;
+  background-color: GhostWhite;
+  border-radius: 50%;
+  box-shadow: 0 0 var(--blur) var(--spread) rgba(255, 255, 224, 0.5);
+  height: var(--size);
+  left: var(--left);
+  opacity: 0;
+  position: absolute;
+  top: var(--top);
+  width: var(--size);
+  z-index: 5;
+}
+
+@keyframes sparkle {
+  0% { opacity: 0; }
+  25% { opacity: var (--opacity); }
+  75% { opacity: 0.9; }
+  100% { opacity: 0; }
+}
+
+#prevention ul {
+  text-align: left;
+}
+
+.artists {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 800px) {
+  .artists {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1300px) {
+  .artists {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.artist-photos {
+  border-radius: 100%;
+  width: 80%;
+  max-width: 300px;
+}
+
+.djs {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.djs div {
+  max-width: 250px;
+}
+
+#autre-cercle-logo {
+  width: 350px;
+}
