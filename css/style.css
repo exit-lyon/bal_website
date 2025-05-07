@@ -356,7 +356,7 @@ p {
 
 @media (min-width: 1300px) {
   .artists {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -379,5 +379,9 @@ p {
 }
 
 #autre-cercle-logo {
+  width: 350px;
+}
+
+#dilcrah-logo {
   width: 350px;
 }
