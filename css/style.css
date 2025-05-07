@@ -392,8 +392,12 @@ p {
 
 #pmr_icon {
   height: 40px;
+  margin: 0;
+  line-height: 1.5;
 }
 
 #rain_icon {
   height: 40px;
+  margin: 0;
+  line-height: 1.5;
 }
