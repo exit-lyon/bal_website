@@ -49,7 +49,7 @@
 }
 
 .bg-zero {
-  background-image: url("../assets/mirror.png");
+  /* background-image: url("../assets/mirror.png"); */
   background-size: 100%;
   background-repeat: no-repeat;
   width:100%;
