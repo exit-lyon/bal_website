@@ -372,13 +372,13 @@ p {
 
 @media (min-width: 800px) {
   .dragartists {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1300px) {
   .dragartists {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
