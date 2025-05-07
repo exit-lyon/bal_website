@@ -80,7 +80,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map2);
 
 const customIcon = L.icon({
-  iconUrl: '../assets/icons/heart_progressflag.png',
+  iconUrl: '../assets/icons/pin_lgbt.png',
   iconSize: [40, 40]
 })
 
