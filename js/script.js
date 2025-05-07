@@ -81,7 +81,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 const customIcon = L.icon({
   iconUrl: '../assets/icons/pin_lgbt.png',
-  iconSize: [40, 40]
+  iconSize: [50, 50]
 })
 
 var marker = L.marker([45.7677796, 4.8358137], {icon: customIcon}).addTo(map);
