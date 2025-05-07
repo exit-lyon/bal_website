@@ -67,15 +67,23 @@ function clickCarousel(event) {
 // 2024 Add-ons
 
 var map = L.map('map').setView([45.7677796, 4.8358137], 18);
+var map2 = L.map('map2').setView([45.767568, 4.834293], 18);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map2);
+
 var marker = L.marker([45.7677796, 4.8358137]).addTo(map);
+var marker2 = L.marker([45.767568, 4.834293]).addTo(map2);
 
 marker.bindPopup("<b>Hôtel de Ville de Lyon</b><br>Entrée Place de la Comédie").openPopup();
+marker2.bindPopup("<b>Hôtel de Ville de Lyon</b><br>Entrée Place des Terreaux").openPopup();
 
 // Sparkles
 
