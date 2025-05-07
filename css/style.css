@@ -64,6 +64,10 @@
   background-image: linear-gradient(-135deg, #f3b8a8, #f88f7c);
 }
 
+.bg-two {
+  color: #2d3436;
+}
+
 .bg-three:before {
   background-image: linear-gradient(-135deg, #1d6595, #4b50c6);
 }
